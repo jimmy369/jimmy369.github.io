@@ -140,34 +140,28 @@ break;
 function validateForm() {
     var name = document.forms["vform"]["fname"].value;
     var surname = document.forms["vform"]["lname"].value;
-    var email = document.forms["vform"]["email"].value;
+	var letters = new RegExp("^[a-zA-Z]+$");
+	var email = document.forms["vform"]["email"].value;
     var patt = new RegExp("^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$");
 	var checkbox = document.getElementById('checkbox'); 
-
     var result = true;
 	
 
-    if (name == null || name == "") {
-        alert("Name must be filled out!!");
+    if (name == null || name == "" || name.length < 3 || letters.test(name) != true ) {
+        alert("Name must have alphanumeric characters only and contains at least 3 letters!!");
        result = false;
     }
-    else if(name.length < 3)
-    {  
-    	  alert("Name must contain at least 3 letters!!");
-       	result = false;
+   
+	
+	
 
-    } 
-
-    if (surname == null || surname == "") {
-        alert("Surname must be filled out!!");
+    if (surname == null || surname == "" || surname.length < 5 || letters.test(surname) != true ) {
+        alert("Surame must have alphanumeric characters only and contains at least 5 letters!!");
          result = false;
     }
-    else if(surname.length < 5)
-    {  
-    	alert("Surname must contain at least 5 letters!!");
-       	result = false;
-
-    } 
+    
+	
+	
 
     if (email == null || email == "") {
         alert("Email address must be filled out!!");
@@ -185,9 +179,11 @@ function validateForm() {
 			result = false;
 	}
 	
-		 
+    
 	return result;
+	
 }
+		
 		
 
 		
