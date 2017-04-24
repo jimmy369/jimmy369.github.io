@@ -147,34 +147,87 @@ function validateForm() {
     var result = true;
 	
 
-    if (name == null || name == "" || name.length < 3 || letters.test(name) != true ) {
-        alert("Name must have alphanumeric characters only and contains at least 3 letters!!");
-       result = false;
+    if (name == null || name == "") {
+		
+        alert("The Name(s) field is required.");
+       
+	    result = false;
     }
+	
+	else if (letters.test(name) != true && name.length < 3){
    
+	    alert("Name must have alphanumeric characters only and contain at least 3 letters !!");
+		
+		result = false;
+		
+	}
+	
+	else if (letters.test(name) == true && name.length < 3){
+   
+	    alert("Name must contain at least 3 letters !!");
+		
+		result = false;
+		
+	}
 	
 	
 
-    if (surname == null || surname == "" || surname.length < 5 || letters.test(surname) != true ) {
-        alert("Surname must have alphanumeric characters only and contains at least 5 letters!!");
-         result = false;
-    }
-    
+	else if ( letters.test(name) != true && name.length >= 3 ){
+   
+	    alert("Name must have alphanumeric characters only !!");
+		
+		result = false;
+		
+	}
 	
+	
+	
+	if (surname == null || surname == "") {
+		
+        alert("The Surname(s) field is required.");
+       
+	    result = false;
+    }
+	
+	else if (letters.test(surname) != true && surname.length < 5){
+   
+	    alert("Surname must have alphanumeric characters only and contain at least 5 letters !!");
+		
+		result = false;
+		
+	}
+	
+	else if (letters.test(surname) == true && surname.length < 5){
+   
+	    alert("Surname must contain at least 5 letters !!");
+		
+		result = false;
+		
+	}
+	
+	
+
+	else if ( letters.test(surname) != true && surname.length >= 5 ){
+   
+	    alert("Surname must have alphanumeric characters only !!");
+		
+		result = false;
+		
+	}
 	
 
     if (email == null || email == "") {
-        alert("Email address must be filled out!!");
+        alert("The Email field is required.");
          result = false;
     }
     else if (patt.test(email) != true ) {
-        alert("You have entered a wrong email format!!");
+        alert("Please enter a valid email address.");
        result = false;
     }
 	
 	if (checkbox.checked !=true){
         
-		alert("Please confirm you would like to receive our newsletters!")
+		alert("Please confirm you would like to receive our newsletters !")
 			
 			result = false;
 	}
