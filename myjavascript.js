@@ -156,7 +156,7 @@ function validateForm() {
 	
 	else if (letters.test(name) != true && name.length < 3){
    
-	    alert("Name must have alphanumeric characters only and contain at least 3 letters !!");
+	    alert("Name must have alphabetic characters only and contain at least 3 letters !!");
 		
 		result = false;
 		
@@ -174,7 +174,7 @@ function validateForm() {
 
 	else if ( letters.test(name) != true && name.length >= 3 ){
    
-	    alert("Name must have alphanumeric characters only !!");
+	    alert("Name must have alphabetic characters only !!");
 		
 		result = false;
 		
@@ -191,7 +191,7 @@ function validateForm() {
 	
 	else if (letters.test(surname) != true && surname.length < 5){
    
-	    alert("Surname must have alphanumeric characters only and contain at least 5 letters !!");
+	    alert("Surname must have alphabetic characters only and contain at least 5 letters !!");
 		
 		result = false;
 		
@@ -209,7 +209,7 @@ function validateForm() {
 
 	else if ( letters.test(surname) != true && surname.length >= 5 ){
    
-	    alert("Surname must have alphanumeric characters only !!");
+	    alert("Surname must have alphabetic characters only !!");
 		
 		result = false;
 		
