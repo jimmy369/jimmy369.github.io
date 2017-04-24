@@ -156,7 +156,7 @@ function validateForm() {
 	
 
     if (surname == null || surname == "" || surname.length < 5 || letters.test(surname) != true ) {
-        alert("Surame must have alphanumeric characters only and contains at least 5 letters!!");
+        alert("Surname must have alphanumeric characters only and contains at least 5 letters!!");
          result = false;
     }
     
