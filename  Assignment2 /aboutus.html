@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="initial-scale=1.0">
+<title>About us</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQ6tfHWlek6bQJgEnTdZyzGBjjBlbBF68&callback=initMap" type="text/javascript"></script>
+<script src="js/myjavascript.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.min.js"></script>
+<style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+		margin-left:50px;
+		margin-right:50px;
+        padding: 0;
+      }
+    </style>
+
+
+</head>
+
+<body>
+
+<nav class="fixed-nav-bar">
+<a href="index.html" class="logo">Wall Street Wines</a>
+
+<script type="text/javascript">
+display_nav();
+</script>
+
+</nav>
+
+<div class="indroductionUs" style="margin-top:150px;">
+<hr>
+Wall Street Wines opened in June 1860, the product of David Smith's and Jamie Dacey's idea that Dunedin might support a shop that indulged their love for naturally made wines from artisanal small producers.<p>
+
+Particular strengths here are the Loire Valley, Burgundy and the Rhone, Piedmont, Austria and Germany; we are always working to improve our selection, and we want our wine to be available to all new Zealanders to begin with who would like to buy them over the internet.
+<p>
+</p>
+</p>
+<hr>
+</div>
+
+<div class="indroductionUs">
+<p>Unit 2, Waitakere Plaza,<br>
+Vitasovich Avenue<br>
+Henderson, <br>
+Auckland<p>
+
+Phone: (09) 835 1860<br>
+Email: service@wsw.com<p>
+
+Opening Hours:
+Mon-Wed 9:00am - 5:30pm<br>
+Thurs 9:00am - 8:00pm<br>
+Fri 9:00am - 5:30pm<br>
+Sat & Sun 9:00am - 6:00pm<br>
+</p>
+</p>
+</p>
+<hr>
+</div>
+
+
+
+
+    
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var store = {lat: -36.863661, lng: 174.564094};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: store
+        });
+
+        var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading"><img src="img/location.png"></h1>'+
+            '<div id="bodyContent">'+
+            
+            '</div>'+
+            '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+
+        var marker = new google.maps.Marker({
+          position: store,
+          map: map,
+          title: 'Wall Street Wines'
+        });
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwWvyL2KRwPabRL9zGtwlIolBlRgZ8Lm0
+&callback=initMap">
+    </script>
+  
+<hr>
+<footer class="footer">2017 SEMESTER1. IWD ASSIGNMENT2. ALL RIGHT RESERVED.</footer>
+
+
+</body>
+</html>
