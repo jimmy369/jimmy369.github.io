@@ -83,15 +83,7 @@ a.logo {
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
 	
-	-webkit-animation-duration: 10s;
-	-webkit-animation-timing-function: linear;
-	-webkit-animation-iteration-count: infinite;
-	-webkit-animation-direction: alternate;
 	
-	-moz-animation-duration: 10s;
-	-moz-animation-timing-function: linear;
-	-moz-animation-iteration-count: infinite;
-	-moz-animation-direction: alternate;
 	
 }
 
@@ -106,22 +98,7 @@ a.logo {
 	100% { color: purple; }
 }
 
-@-moz-keyframes colors {
-	0% { color: red; }
-	20% { color: orange; }
-	40% { color: yellow; }
-	60% { color: green; }
-	80% { color: blue; }
-	100% { color: purple; }
-}
-@-webkit-keyframes colors {
-	0% { color: red; }
-	20% { color: orange; }
-	40% { color: yellow; }
-	60% { color: green; }
-	80% { color: blue; }
-	100% { color: purple; }
-}
+
 
 
 
@@ -300,7 +277,7 @@ div.see:hover, div.see:focus {
 
 .sub1 {
 	
-	height:;
+	
 	text-align:center;
 	vertical-align:middle;
 	color:#FFFFFF;
@@ -386,12 +363,6 @@ ul.menu a:hover {
 }
  
 
-a {
- outline: none; /* for Firefox */
- hlbr:expression(this.onFocus=this.blur()); /* for IE */
-} 
-
-/*  for product page*/
 
 
 
