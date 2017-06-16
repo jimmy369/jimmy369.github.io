@@ -194,7 +194,6 @@ function validateForm() {
 		
 
 		
-//Accommodation 
 
 
 
